@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="NuttyNaj - Hand-packed premium nuts in Benoni. Cashew Nuts, Macadamia, Pecan, Walnut, Hazelnut, Pistachio, Mixed Nuts, Dried Fruits. Free delivery over R350.">
+<meta name="keywords" content="NuttyNaj, Nuts, Naj, Nutty Naj, cashew nuts, macadamia nuts, pecan nuts, walnut, hazelnut, pistachio, mixed nuts, dried fruits, jungle mix, roasted nuts Benoni, snacks South Africa">
+<meta name="author" content="NuttyNaj">
+<meta name="robots" content="index, follow">
+
+<!-- For Google to show your logo -->
+<meta property="og:title" content="NuttyNaj - Premium Nuts">
+<meta property="og:description" content="Premium hand-packed nuts. Free delivery over R350.">
+<meta property="og:image" content="images/NuttyLogo.jpeg">
+<meta property="og:url" content="https://nattynaj.co.za">
+<meta property="og:type" content="website">
+
+<!-- Mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Anton&family=Cormorant+Garamond:wght@300;400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+<link rel="shortcut icon" href="images/NuttyLogo.jpeg" type="image/x-icon">
+<title>Shop - NuttyNaj</title>
+<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo"><img src="images/NuttyLogo.jpeg" alt="NuttyNaj">NuttyNaj</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="shop.html" class="active">SHOP</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="cart.html" class="cart-link">CART <span class="cart-count" id="cart-count">0</span></a>
+      <a href="admin.html">ADMIN</a>
+    </nav>
+    <button class="hamburger" id="hamburgerBtn">☰</button>
+  </div>
+</header>
+
+<!--Two Videos-->
+<section class="shop-videos">
+  <div class="video-card">
+    <div class="video-wrap">
+      <video autoplay muted loop playsinline>
+        <source src="images/LagBox.mp4" type="video/mp4">
+      </video>
+    </div>
+    <h3 class="video-title">All Nuts Available in 40XPack Boxes</h3>
+  </div>
+</section>
+
+<section class="shop-hero">
+  <h4>Small-batch boxes. <b>FREE</b> courier delivery on orders over R350</h4>
+  <h1>Choose your nuts.<br><span>Pick flavour & coating.</span></h1>
+</section>
+
+<div class="category-bar" id="categoryBar">
+  <!-- Built dynamically by JS -->
+  <button class="cat-btn active" data-cat="all">All (14)</button>
+  <button class="cat-btn" data-cat="Cashew Nuts">Cashew Nuts</button>
+  <button class="cat-btn" data-cat="Macadamia Nuts">Macadamia Nuts</button>
+  <button class="cat-btn" data-cat="Pecan Nuts">Pecan Nuts</button>
+  <button class="cat-btn" data-cat="Walnut Nuts">Walnut Nuts</button>
+  <button class="cat-btn" data-cat="Hazelnuts">Hazelnuts</button>
+  <button class="cat-btn" data-cat="Pistachio Nuts">Pistachio Nuts</button>
+  <button class="cat-btn" data-cat="Mixed Nuts">Mixed Nuts</button>
+  <button class="cat-btn" data-cat="Dried Fruits">Dried Fruits</button>
+</div>
+
+<div class="shop-container">
+  <div class="products-grid" id="productsGrid"></div>
+</div>
+
+<!-- PRODUCT MODAL -->
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <span class="modal-close" id="modalClose">✕</span>
+    <h3 id="mTitle"></h3>
+    <p id="mDesc" class="m-desc"></p>
+    <p id="mPrice" class="m-price"></p>
+    
+    <label>Flavour</label>
+    <select id="mFlavour">
+      <option>Roasted Salted</option>
+      <option>Raw</option>
+      <option>Extra Hot Peri-Peri</option>
+      <option>Roasted Plain</option>
+    </select>
+
+    <label>Coating</label>
+    <select id="mCoating">
+      <option>Raw / Natural (Uncoated)</option>
+      <option>Yoghurt Coated</option>
+      <option>Milk Chocolate Coated</option>
+      <option>White Chocolate Coated</option>
+      <option>Caramel Coated</option>
+    </select>
+
+    <button class="btn btn-dark full-btn" id="modalAddBtn">ADD TO CART</button>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand"><h2 class="footer-logo">NuttyNaj</h2><p class="footer-desc">Kraft-boxed nuts and dried fruit, hand-packed in 50g portions in Benoni.</p></div>
+    <div class="footer-col"><h4>VISIT</h4><p>2 Central Street<br>Gordons View, Benoni</p><p class="footer-contact">072 861 9405</p></div>
+    <div class="footer-col"><h4>SHOP</h4><a href="shop.html">All products</a><a href="cart.html">Your box</a><a href="contact.html">Contact</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 NUTTYNAJ 
+    <span class="teocode">Built by <a href="https://s232175012.github.io/Portfolio/" target="_blank">TeoCode</a></span>
+  </p></div>
+</footer>
+
+<!-- TRACK ORDER FLOATING -->
+<div class="track-float" id="trackFloat">
+  <button id="trackBtn">📦 TRACK ORDER</button>
+</div>
+
+<div class="modal" id="trackModal">
+  <div class="modal-content wide">
+    <span class="modal-close" id="trackClose">✕</span>
+    <h3>Track Your Order</h3>
+    <p class="m-desc">Enter phone number used at checkout</p>
+    <div class="track-form">
+      <input type="tel" id="trackPhone" placeholder="e.g. 072 861 9405">
+      <button class="btn btn-dark full-btn" id="doTrack">TRACK NOW</button>
+    </div>
+    <div id="trackResults"></div>
+  </div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+<script src="script/javascript.js"></script>
+</body>
+</html>

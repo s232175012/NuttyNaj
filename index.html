@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="NuttyNaj - Hand-packed premium nuts in Benoni. Cashew Nuts, Macadamia, Pecan, Walnut, Hazelnut, Pistachio, Mixed Nuts, Dried Fruits. Free delivery over R350.">
+<meta name="keywords" content="NuttyNaj, Nuts, Naj, Nutty Naj, cashew nuts, macadamia nuts, pecan nuts, walnut, hazelnut, pistachio, mixed nuts, dried fruits, jungle mix, roasted nuts Benoni, snacks South Africa">
+<meta name="author" content="NuttyNaj">
+<meta name="robots" content="index, follow">
+
+<!-- For Google to show your logo -->
+<meta property="og:title" content="NuttyNaj - Premium Nuts">
+<meta property="og:description" content="Premium hand-packed nuts. Free delivery over R350.">
+<meta property="og:image" content="images/NuttyLogo.jpeg">
+<meta property="og:url" content="https://nattynaj.co.za">
+<meta property="og:type" content="website">
+
+<!-- Mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Anton&family=Cormorant+Garamond:wght@300;400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+<link rel="shortcut icon" href="images/NuttyLogo.jpeg" type="image/x-icon">
+
+<title>NuttyNaj</title>
+<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo"><img src="images/NuttyLogo.jpeg" alt="NuttyNaj">NuttyNaj</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="active">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="shop.html">SHOP</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="cart.html" class="cart-link">CART <span class="cart-count" id="cart-count">0</span></a>
+      <a href="admin.html">ADMIN</a>
+    </nav>
+    <button class="hamburger" id="hamburgerBtn">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="images/vidoBack.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-inner">
+    <p class="eyebrow">WHOLESALE & RETAIL SUPPLY —<br>BENONI, SOUTH AFRICA</p>
+    <h1>
+      <span class="white">Organic by nature.</span><br>
+      <span class="gold">Premium by design.</span>
+    </h1>
+    <p class="hero-desc">
+      Premium organic nuts and dried fruit, hand-finished in Benoni and packed in kraft cartons built for the shelf — supplying delis, grocers and health stores nationwide.
+    </p>
+    <div class="hero-buttons">
+      <a href="contact.html" class="btn btn-gold">BECOME A STOCKIST <span>↗</span></a>
+      <a href="shop.html" class="btn btn-outline">EXPLORE THE RANGE <span>↗</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h2 class="footer-logo">NuttyNaj</h2>
+      <p class="footer-desc">Kraft-boxed nuts and dried fruit, hand-packed in 50g portions in Benoni, South Africa.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>VISIT & ORDER</h4>
+      <p>2 Central Street<br>Gordons View, Benoni 1513</p>
+      <p class="footer-contact">
+        072 861 9405<br>
+        info@nuttynaj.co.za
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>SHOP</h4>
+      <a href="shop.html">All products</a>
+      <a href="cart.html">Your box</a>
+      <a href="contact.html">Contact us</a>
+      <a href="https://www.nuttynaj.co.za">www.nuttynaj.co.za</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 NUTTYNAJ — BENONI, SOUTH AFRICA <span class="teocode">Built by <a href="https://s232175012.github.io/Portfolio/" target="_blank">TeoCode</a></span></p>
+  </div>
+</footer>
+
+<!-- TRACK ORDER FLOATING -->
+<div class="track-float" id="trackFloat">
+  <button id="trackBtn">📦TRACK</button>
+</div>
+
+<div class="modal" id="trackModal">
+  <div class="modal-content wide">
+    <span class="modal-close" id="trackClose">✕</span>
+    <h3>Track Your Order</h3>
+    <p class="m-desc">Enter phone number used at checkout</p>
+    <div class="track-form">
+      <input type="tel" id="trackPhone" placeholder="e.g. 072 861 9405">
+      <button class="btn btn-dark full-btn" id="doTrack">TRACK NOW</button>
+    </div>
+    <div id="trackResults"></div>
+  </div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+<script src="script/javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin - NuttyNaj</title>
+<link rel="stylesheet" href="style/style.css">
+<link rel="stylesheet" href="style/admin.css">
+</head>
+<body>
+<div id="loginScreen" style="display:flex;min-height:100vh;align-items:center;justify-content:center;background:#f5f5f5">
+  <div style="background:white;padding:32px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.1);width:90%;max-width:400px">
+    <h2 style="margin:0 0 8px">🔒 NuttyNaj Admin</h2>
+    <p style="color:#666;font-size:13px;margin:0 0 20px">Secure Firebase Login</p>
+    <input id="loginEmail" class="input" type="email" placeholder="Email/Username">
+    <input id="loginPass" class="input" type="password" placeholder="Password" style="margin-top:10px">
+    <button id="loginBtn" class="btn-primary" style="width:100%;margin-top:16px">Login</button>
+    <div id="loginError" style="display:none;color:red;font-size:13px;margin-top:12px;text-align:center">Wrong email or password</div>
+    <a href="shop.html" target="_blank" class="mini-link">Go To Shop ↗</a>
+  </div>
+</div>
+
+<div id="adminWrap" style="display:none">
+  <!-- your existing admin header + tabs here - keep your old adminWrap content -->
+  <header class="admin-header" style="display:flex;justify-content:space-between;padding:16px;background:white;border-bottom:1px solid #eee">
+    <b>NuttyNaj Admin - SECURE MODE</b>
+    <button id="logoutBtn" class="btn-del">Logout</button>
+  </header>
+  <div style="padding:20px">
+    <div class="tabs" style="display:flex;gap:10px;margin-bottom:20px">
+      <button class="tab-btn active" data-tab="orders">Orders <span id="orderCount">0</span></button>
+      <button class="tab-btn" data-tab="stock">Stock <span id="stockCount">0</span></button>
+    </div>
+    <div id="tab-orders" class="tab-pane"><div id="ordersList"></div></div>
+    <div id="tab-stock" class="tab-pane" style="display:none">
+      <div class="admin-card">
+        <input id="newCat" class="input" placeholder="Category e.g. Cashew Nuts">
+        <input id="newName" class="input" placeholder="Product Name" style="margin-top:8px">
+        <input id="newImageFile" type="file" accept="image/*" style="margin-top:8px">
+        <img id="previewImg" style="display:none;width:80px;height:80px;object-fit:cover;margin-top:8px;border-radius:8px">
+        <button id="addStockBtn" class="btn-primary" style="margin-top:10px">Add Product</button>
+      </div>
+      <div id="stockList" style="margin-top:20px"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+<script src="script/admin.js"></script>
+</body>
+</html>
